@@ -53,6 +53,7 @@ export class AuthController {
     }
   }
 
+  @Public(true)
   @Post('refresh')
   @UsePipes(ValidationPipe)
   async refreshToken(@Body() refreshDto: RefreshDto) {
